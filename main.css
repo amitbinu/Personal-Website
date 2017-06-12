@@ -1,0 +1,90 @@
+
+body{
+	background: black;
+}
+
+#Header{
+	text-align: center;
+}
+#Name{
+	font-size: 40px;
+	font-family: 'Cabin';
+	letter-spacing: 3px;
+	color: white;
+	position: relative;
+	font-weight: 5px;
+}
+
+#titleName{
+	font-size: 20px;
+	color: white;
+	letter-spacing: 3px;
+	position: relative;
+	font-weight: 2px;
+}
+
+.mac{
+	position: relative;
+	top: 5px;
+	width: 220px;
+	margin:auto;
+}
+
+.laptop{
+	border: 1px solid white;
+	border-bottom-color: transparent;
+	max-width: 190px;
+	border-radius: 3px;
+	margin-left: 14px;
+}
+
+.bezel{
+	border: 5px solid #494949;
+	max-width: 179;
+	max-height: 100px;
+	border-top-width: 14px;
+	border-bottom-width: 12px;
+}
+
+.fa{
+	position: relative;
+	bottom: 18px;
+	margin: auto;
+	font-size: 0.3em;
+	color: white;
+}
+
+.fa-lg {
+  font-size: 8px !important;}
+
+#camera{
+	width: 7px;
+	height: 7px;
+	position: relative;
+	bottom: 115px;
+	left: 0;
+	z-index: 1;
+	background: black;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+#keyboard{
+	width:220px;
+	height: 8px;
+	background: #bababa;
+	position: relative;
+	bottom: 2px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.mouse{
+	width: 55px;
+	height:5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin:auto;
+	background: white;
+}
+
