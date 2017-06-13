@@ -7,17 +7,18 @@ body{
 	text-align: center;
 }
 #Name{
-	font-size: 40px;
+	font-size: 60px;
 	font-family: 'Cabin';
 	letter-spacing: 3px;
-	color: white;
+	color: #d6d6d6;
 	position: relative;
 	font-weight: 5px;
 }
 
 #titleName{
-	font-size: 20px;
-	color: white;
+	font-size: 30px;
+	font-family: 'Cabin';
+	color: #d6d6d6;
 	letter-spacing: 3px;
 	position: relative;
 	font-weight: 2px;
@@ -25,6 +26,7 @@ body{
 
 .mac{
 	position: relative;
+	z-index: 100;
 	top: 5px;
 	width: 220px;
 	margin:auto;
@@ -86,5 +88,32 @@ body{
 	border-bottom-right-radius: 5px;
 	margin:auto;
 	background: white;
+}
+
+
+#randomDotAnimation{
+	position: absolute;
+	top: 0;
+	z-index: 20
+	border: 2px solid yellow;
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+#Header{
+	position: relative;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#headerContent{
+	position: relative;
+	z-index: 5;
+	background-color: rgba(0,0,0,0.4);
 }
 
