@@ -5,29 +5,36 @@ body{
 
 #Header{
 	text-align: center;
+	position: relative;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
-#Name{
-	font-size: 60px;
+
+#Name, #titleName{
 	font-family: 'Cabin';
 	letter-spacing: 3px;
 	color: #d6d6d6;
 	position: relative;
+}
+#Name{
+	font-size: 80px;
 	font-weight: 5px;
 }
 
 #titleName{
-	font-size: 30px;
-	font-family: 'Cabin';
-	color: #d6d6d6;
-	letter-spacing: 3px;
-	position: relative;
+	font-size: 40px;
 	font-weight: 2px;
 }
 
 .mac{
 	position: relative;
+	left: 10px;
 	z-index: 100;
-	top: 5px;
 	width: 220px;
 	margin:auto;
 }
@@ -49,15 +56,15 @@ body{
 }
 
 .fa{
+	color: white;
+}
+.fa-apple{
 	position: relative;
 	bottom: 18px;
 	margin: auto;
 	font-size: 0.3em;
-	color: white;
+	font-size: 8px !important;
 }
-
-.fa-lg {
-  font-size: 8px !important;}
 
 #camera{
 	width: 7px;
@@ -90,30 +97,80 @@ body{
 	background: white;
 }
 
-
-#randomDotAnimation{
-	position: absolute;
-	top: 0;
-	z-index: 20
-	border: 2px solid yellow;
-	background-color: rgba(0,0,0,0.5);
-}
-
-
-#Header{
+.Heading{
 	position: relative;
-    display: flex;
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+	top: 5px;
+	margin: auto;
+	align-items: center;
+	display: flex;
+}
+.Line1, .Line2{
+	position: relative;
+	margin: auto;
+	background: white;
+	margin-top: 50%;
+	margin-bottom: 50%;
+	width: 33.3%;
+	height: 0.5px;
+}
+.Line1{
+	left: 2%;
 }
 
-#headerContent{
-	position: relative;
-	z-index: 5;
-	background-color: rgba(0,0,0,0.4);
+.Line2{
+	right: 2%;
 }
+#Projects{
+	color: #d6d6d6;
+	font-size: 40px;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+#OneLine{
+	margin:auto;
+	display: flex;
+	position: relative;
+	top: 15px;
+}
+
+.Github, .Linkedin, .Mail, .Twitter{
+	position: relative;
+	top: 23px;
+	font-size: 60px !important;
+
+}
+.Github{
+	left: 23%;
+	height: 50px;
+}
+
+.Linkedin{
+	left: 46%;
+	height: 50px;
+}
+
+.Mail{
+	right: 46%;
+	height: 50px;
+}
+
+.Twitter{
+	right: 23%;
+	height: 50px;
+}
+a{
+	text-decoration:none;
+}
+.Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
+	
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	color: white;
+	font-size: 20px;
+	bottom: 25px;
+}
+
 
