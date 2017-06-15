@@ -18,7 +18,7 @@ body{
 #Name, #titleName{
 	font-family: 'Cabin';
 	letter-spacing: 3px;
-	color: #d6d6d6;
+	color: white;
 	position: relative;
 }
 #Name{
@@ -168,9 +168,11 @@ a{
 	position: relative;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;
-	color: white;
+	color: #939393;
 	font-size: 20px;
 	bottom: 25px;
 }
 
-
+i:hover{
+	color:  #939393 !important;
+}
