@@ -3,6 +3,8 @@
 window.onload = function(){
 	canv = document.getElementById("binaryNums");
 	ctx=canv.getContext("2d");
+	header = document.getElementById("Header");
+	header.height= window.innerHeight;
 	var startAnimation01 = setInterval(animate0s1s,1000/30);
 }
 
@@ -93,3 +95,8 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function makeNumber(x,y,num){
+	this.x = x;
+	this.y = y;
+	this.num = num;
+}
