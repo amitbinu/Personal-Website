@@ -1,0 +1,261 @@
+
+body{
+	background: black;
+	width: 100%;
+	height: 100%;}
+
+#Header{
+	text-align: center;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#Name, #titleName{
+	font-family: 'Cabin', sans-serif;
+	letter-spacing: 3px;
+	color: white;
+	position: relative;
+}
+#Name{
+	font-size: 80px;
+}
+
+#titleName{
+	width: 900px;
+	font-size: 30px;
+	margin-top: 50px;
+}
+
+
+#OneLine{
+	width: 800px;
+	margin:auto;
+	display: inline-flex;
+	margin-top: 70px;
+}
+.mac{
+	position: relative;
+	left: 8px;
+	z-index: 100;
+	width: 220px;
+	margin:auto;
+}
+
+.laptop{
+	border: 1px solid #bababa;
+	border-bottom-color: transparent;
+	max-width: 190px;
+	border-radius: 2.5px;
+	margin-left: 14px;
+}
+
+.bezel{
+	border: 5px solid #494949;
+	max-width: 179;
+	max-height: 100px;
+	border-top-width: 14px;
+	border-bottom-width: 12px;
+}
+
+.fa{
+	color: white;
+}
+.fa-apple{
+	position: relative;
+	bottom: 18px;
+	margin: auto;
+	font-size: 0.3em;
+	font-size: 8px !important;
+}
+
+#camera{
+	width: 7px;
+	height: 7px;
+	position: relative;
+	bottom: 115px;
+	left: 0;
+	z-index: 1;
+	background: black;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+
+#keyboard{
+	width:220px;
+	height: 8px;
+	background: #bababa;
+	position: relative;
+	bottom: 2px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.mouse{
+	width: 55px;
+	height:4.3px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin:auto;
+	background: white;
+}
+
+
+.Github, .Linkedin, .Mail, .Twitter{
+	position: relative;
+	top: 23px;
+	font-size: 60px !important;
+	margin-right:auto;
+	margin-left: auto;
+
+}
+
+.fa-linkedin, .fa-github, .fa-twitter, .fa-envelope-o{
+	color: #42d7f4 !important;
+}
+.Github{
+
+	height: 50px;
+}
+
+.Linkedin{
+	height: 50px;
+}
+
+.Mail{
+	height: 50px;
+}
+
+.Twitter{
+	height: 50px;
+}
+a{
+	text-decoration:none;
+}
+.Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	color: #939393;
+	font-size: 20px;
+	bottom: 25px;
+}
+
+i:hover{
+	color: #c4f4ff !important;
+}
+a:hover{
+	cursor:pointer;
+}
+
+.Heading{
+	position: relative;
+	margin-top: 5%;
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-flex;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	color: white;
+}
+
+#Projects{
+	color: #d6d6d6;
+	font-size: 55px;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	width: 34%;
+}
+
+.Line1, .Line2{
+	border:0.1px solid #42d7f4;
+	margin: auto;
+	background-color: #42d7f4;
+	width: 40%;
+	height: 0.5px;
+}
+
+#Yummy, #MacChat{
+	width: 900px;
+	height: 500px;
+	margin: auto;
+	border-radius: 10px;
+	position: relative;
+	margin-top: 5%;
+	background-image: -webkit-linear-gradient(#ffffff,#8c8c8c);
+	}
+
+#YummyIcon{
+	position: relative;
+	top: 30px;
+	left: 20px;
+}
+
+.Project span{
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	display: inline-flex;
+}
+
+#Yummy .projectName{
+	font-size: 40px;
+	margin: auto 0;
+	position: relative;
+	top: 25px;
+	left: 30px;
+}
+.round{
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	position: relative;
+	right: 5px;
+}
+.one{
+	position: relative;
+	margin: auto;
+	background: #0c99f7;
+}
+
+#yummy-Java{
+	font-size: 20px;
+	position: relative;
+	margin: auto;
+	margin-right: 5px;
+}
+
+#MacChat{
+	margin-top: 5%;
+}
+
+.firstTool, .SecondTool{
+	display: inline-flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.firstTool{
+	margin-top: 90px;
+	margin-right: 10px;
+}
+
+.SecondTool{
+	margin-top: 130px;
+	margin-right: 12.5px;
+}
+
+.description{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 22px;
+	width: 40%;
+	margin-top: 40px;
+	margin-left: 60px;
+}
