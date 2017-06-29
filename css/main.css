@@ -106,8 +106,7 @@ body{
 
 
 .Github, .Linkedin, .Mail, .Twitter{
-	position: relative;
-	top: 23px;
+	margin: 0 auto;
 	font-size: 60px !important;
 	margin-right:auto;
 	margin-left: auto;
@@ -117,32 +116,17 @@ body{
 .fa-linkedin, .fa-github, .fa-twitter, .fa-envelope-o{
 	color: #42d7f4 !important;
 }
-.Github{
 
-	height: 50px;
-}
-
-.Linkedin{
-	height: 50px;
-}
-
-.Mail{
-	height: 50px;
-}
-
-.Twitter{
-	height: 50px;
-}
 a{
+	height: 100%;
 	text-decoration:none;
 }
 .Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
-	position: relative;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;
 	color: #939393;
 	font-size: 20px;
-	bottom: 25px;
+	margin: 0 auto;
 }
 
 i:hover{
@@ -189,6 +173,7 @@ a:hover{
 	border-radius: 10px;
 	position: relative;
 	margin-top: 5%;
+	background:#ffffff;
 	background-image: -webkit-linear-gradient(#ffffff,#8c8c8c);
 	}
 
