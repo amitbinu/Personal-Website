@@ -17,6 +17,8 @@ body{
 
 #Name, #titleName{
 	font-family: 'Cabin', sans-serif;
+	margin-left: auto;
+	margin-right: auto;
 	letter-spacing: 3px;
 	color: white;
 	position: relative;
@@ -26,78 +28,93 @@ body{
 }
 
 #titleName{
-	width: 900px;
+	margin-top: 1vw;
+}
+
+#titleName h1{
+	font-weight: 100;
 	font-size: 30px;
-	margin-top: 50px;
 }
 
 
 #OneLine{
-	width: 800px;
+	width: 65%;
 	margin:auto;
 	display: inline-flex;
-	margin-top: 70px;
+	margin-top: 3vw;
 }
 .mac{
-	position: relative;
-	left: 8px;
-	z-index: 100;
-	width: 220px;
+	position: relative;	
+	width: 15.4vw;
+	height: 9.2vw;
 	margin:auto;
 }
 
 .laptop{
 	border: 1px solid #bababa;
 	border-bottom-color: transparent;
-	max-width: 190px;
+	width: 13.2vw;
+	height: 8.7vw;
 	border-radius: 2.5px;
-	margin-left: 14px;
+	margin: 0 auto;
+
 }
 
+#binaryNums{
+	position: absolute;
+	top: 1vw;
+	left: 1.6vw;
+	width : 12.2vw;
+	height:7vw;
+}
+
+
 .bezel{
-	border: 5px solid #494949;
-	max-width: 179;
-	max-height: 100px;
-	border-top-width: 14px;
-	border-bottom-width: 12px;
+	border: 0.5vw solid #494949;
+	height: 6.8vw;
+	border-top-width: 1vw;
+	border-bottom-width: 1vw;
 }
 
 .fa{
 	color: white;
 }
 .fa-apple{
-	position: relative;
-	bottom: 18px;
+	position: absolute;
+	left: 48%;
+	bottom: 0.6vw;
 	margin: auto;
-	font-size: 0.3em;
-	font-size: 8px !important;
+	font-size: 0.4vw;
+	font-size: 0.6vw !important;
 }
 
 #camera{
-	width: 7px;
-	height: 7px;
-	position: relative;
-	bottom: 115px;
-	left: 0;
-	z-index: 1;
+	width: 0.45vw;
+	height: 0.45vw;
 	background: black;
+	position: absolute;
+	top: 0.3vw;
+	left: 48%;
+	margin: 0 auto;
+	z-index: 1;
 	border-radius: 100%;
 	margin: 0 auto;
 }
 
 #keyboard{
-	width:220px;
-	height: 8px;
+	width:15.4vw;
+	height: 0.5vw;
 	background: #bababa;
 	position: relative;
+	margin: 0 auto;
 	bottom: 2px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
 
 .mouse{
-	width: 55px;
-	height:4.3px;
+	width: 4vw;
+	height:0.24vw;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	margin:auto;
@@ -106,26 +123,23 @@ body{
 
 
 .Github, .Linkedin, .Mail, .Twitter{
-	margin: 0 auto;
-	font-size: 60px !important;
+	margin: auto;
+	font-size: 5vw !important;
 	margin-right:auto;
 	margin-left: auto;
-
+	height: 100%;
+	text-decoration: none;
 }
 
 .fa-linkedin, .fa-github, .fa-twitter, .fa-envelope-o{
 	color: #42d7f4 !important;
 }
 
-a{
-	height: 100%;
-	text-decoration:none;
-}
 .Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;
 	color: #939393;
-	font-size: 20px;
+	font-size: 1.2vw;
 	margin: 0 auto;
 }
 
