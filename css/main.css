@@ -1,4 +1,7 @@
-
+html{
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
 body{
 	background: black;
 	width: 100%;
@@ -24,7 +27,7 @@ body{
 	position: relative;
 }
 #Name{
-	font-size: 80px;
+	font-size: 100px;
 }
 
 #titleName{
@@ -154,7 +157,7 @@ a:hover{
 .Heading{
 	position: relative;
 	margin-top: 5%;
-	width:65%;
+	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	display: inline-flex;
@@ -166,7 +169,7 @@ a:hover{
 
 #Projects{
 	color: #d6d6d6;
-	font-size: 50px;
+	font-size: 3.3vw;
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
@@ -177,13 +180,14 @@ a:hover{
 	border:0.1px solid #42d7f4;
 	margin: auto;
 	background-color: #42d7f4;
-	width: 40%;
+	width: 38%;
 	height: 0.5px;
 }
 
 .Project{
-	width: 900px;
-	height: 500px;
+	width: 80%;
+	/*height: 35vw;*/
+
 	margin: auto;
 	border-radius: 10px;
 	position: relative;
@@ -195,9 +199,11 @@ a:hover{
 
 #YummyIcon{
 	position: relative;
-	top: 30px;
-	left: 20px;
+	margin-top: 30px;
+	margin-left: 20px;
 }
+
+
 
 .Project span{
 	font-family: 'Open Sans', sans-serif;
@@ -206,11 +212,11 @@ a:hover{
 }
 
 #Yummy .projectName{
-	font-size: 40px;
+	font-size: 30px;
 	margin: auto 0;
 	position: relative;
-	top: 25px;
-	left: 30px;
+	margin-top: 25px;
+	margin-bottom: 30px;
 }
 .round{
 	border-radius: 100%;
@@ -239,7 +245,7 @@ a:hover{
 .firstTool, .SecondTool{
 	display: inline-flex;
 	position: absolute;
-	top: 0;
+	top: 10%;
 	right: 0;
 }
 
@@ -255,8 +261,9 @@ a:hover{
 
 .description{
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 22px;
+	font-size: 25px;
+	font-weight: 100 !important;
 	width: 40%;
-	margin-top: 40px;
+	margin-top: 1vw;
 	margin-left: 60px;
 }
