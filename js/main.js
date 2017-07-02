@@ -16,6 +16,8 @@ var randomNumbers5 =[];
 var x = 7;
 var y =20;
 
+
+	
 for(var i =0; i < 10; i++){
 	var num = new makeNumber(x,y,((getRandomIntInclusive(0,1))));
 	var num2 = new makeNumber(x,y+20,((getRandomIntInclusive(0,1))));
@@ -30,10 +32,19 @@ for(var i =0; i < 10; i++){
 	x+=20;
 }
 
+	for(var rows =0; rows<3; rows++){
+	for (var columns = 0; columns<10; columns++){
+		var num = new makeNumber(x,(y+(rows*20)),((getRandomIntInclusive(0,1))));
+		x+=20;
+	}
+	x=0;
+}
+
 var animate0s1s = function(){
 	
 	ctx.fillStyle= "#2b2b2b";
 	ctx.fillRect(0,0,canv.width,canv.height);
+
 
 	for(var i =0 ; i < 10; i++){
 		ctx.font="bold 12px";
