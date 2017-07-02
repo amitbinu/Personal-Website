@@ -86,6 +86,7 @@ body{
 	margin: auto;
 	font-size: 0.4vw;
 	font-size: 0.6vw !important;
+	color: #f4c06b !important;
 }
 
 #camera{
@@ -153,7 +154,7 @@ a:hover{
 .Heading{
 	position: relative;
 	margin-top: 5%;
-	width:800px;
+	width:65%;
 	margin-left: auto;
 	margin-right: auto;
 	display: inline-flex;
@@ -165,11 +166,11 @@ a:hover{
 
 #Projects{
 	color: #d6d6d6;
-	font-size: 55px;
+	font-size: 50px;
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	width: 34%;
+	display: none;
 }
 
 .Line1, .Line2{
@@ -180,7 +181,7 @@ a:hover{
 	height: 0.5px;
 }
 
-#Yummy, #MacChat{
+.Project{
 	width: 900px;
 	height: 500px;
 	margin: auto;
@@ -189,6 +190,7 @@ a:hover{
 	margin-top: 5%;
 	background:#ffffff;
 	background-image: -webkit-linear-gradient(#ffffff,#8c8c8c);
+	display: none;
 	}
 
 #YummyIcon{
