@@ -1,25 +1,20 @@
 $(document).ready(function(){
-	$('.fa').hide();
+	$('.fa').hide(1);
+	$('#Projects').hide(1);
+	$('.Project').fadeOut(1);
 	$('.fa-apple').show();
-	$('#Projects').hide();
-	
+
 	var showProjects = function(){
 		$('#Projects').show(2500);
+		$('.Project').fadeIn(1500);
 	};
 
-
-
-	$('.fa-envelope-o').effect('bounce',{times:2},1500);
+	$('.fa-envelope-o').effect('bounce',{times:3},1700);
 	//$('.fa-envelope-o').fadeIn(5000);
-	$('.fa-twitter').effect('bounce',{times:2},1500);
-	$('.fa-github').effect('bounce',{times:2},1500);
-	$('.fa-linkedin').effect('bounce',{times:2, duration:1500,complete: showProjects
+	$('.fa-twitter').effect('bounce',{times:3},1700);
+	$('.fa-github').effect('bounce',{times:3},1700);
+	$('.fa-linkedin').effect('bounce',{times:3, duration:1700,complete: showProjects
 });
-/*	$('a').css('border','1px solid yellow');
-	$('i').css('border','1px solid red');
-	$('h4').css('border','1px solid red');*/
-
-	
 
 	var hovered =function(){	
 		var width = $(this).width();
