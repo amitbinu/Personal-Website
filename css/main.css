@@ -4,8 +4,11 @@ html{
 }
 body{
 	background: black;
+	background-image: -webkit-linear-gradient(#e0e0e0,#cecece);
 	width: 100%;
-	height: 100%;}
+	height: 100%;
+	overflow-x: hidden;
+	}
 
 #Header{
 	text-align: center;
@@ -23,15 +26,19 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	letter-spacing: 3px;
-	color: white;
+	
 	position: relative;
 }
 #Name{
 	font-size: 100px;
+	background: -webkit-linear-gradient(#777777,#050505);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 #titleName{
 	margin-top: 1vw;
+	color: #1c1b1b;
 }
 
 #titleName h1{
@@ -136,19 +143,19 @@ body{
 }
 
 .fa-linkedin, .fa-github, .fa-twitter, .fa-envelope-o{
-	color: #42d7f4 !important;
+	color: #0072ff !important;
 }
 
 .Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 100;
-	color: #939393;
+	color: #373738;
 	font-size: 1.2vw;
 	margin: 0 auto;
 }
 
 i:hover{
-	color: #c4f4ff !important;
+	color: #9195ff !important;
 }
 a:hover{
 	cursor:pointer;
@@ -168,8 +175,8 @@ a:hover{
 }
 
 #Projects{
-	color: #d6d6d6;
-	font-size: 3.3vw;
+	color: #1c1b1b;
+	font-size: 4em;
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
@@ -179,21 +186,21 @@ a:hover{
 .Line1, .Line2{
 	border:0.1px solid #42d7f4;
 	margin: auto;
-	background-color: #42d7f4;
-	width: 38%;
+	background-color: #0072ff;
+	width:38%;
 	height: 0.5px;
 }
 
 .Project{
-	width: 80%;
-	/*height: 35vw;*/
+	width: 60%;
+	height: 27em;
 
 	margin: auto;
 	border-radius: 10px;
 	position: relative;
 	margin-top: 5%;
 	background:#ffffff;
-	background-image: -webkit-linear-gradient(#ffffff,#8c8c8c);
+	background-image: -webkit-linear-gradient(#b6f9d1,#767bf7);
 	display: none;
 	}
 
@@ -212,10 +219,10 @@ a:hover{
 }
 
 #Yummy .projectName{
-	font-size: 30px;
+	font-size: 2.5em;
 	margin: auto 0;
 	position: relative;
-	margin-top: 25px;
+	margin-top: 45px;
 	margin-bottom: 30px;
 }
 .round{
@@ -228,17 +235,23 @@ a:hover{
 .one{
 	position: relative;
 	margin: auto;
-	background: #0c99f7;
+	background: #ff5bb8;
+}
+
+.two{
+	position: relative;
+	margin: auto;
+	background: #5487f7;
 }
 
 #yummy-Java{
-	font-size: 20px;
+	font-size: 1.5em;
 	position: relative;
 	margin: auto;
-	margin-right: 5px;
+	margin-right:5px;
 }
 
-#MacChat{
+.Project{
 	margin-top: 5%;
 }
 
@@ -261,9 +274,9 @@ a:hover{
 
 .description{
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 25px;
+	font-size: 1.75em;
 	font-weight: 100 !important;
-	width: 40%;
+	width: 55%;
 	margin-top: 1vw;
 	margin-left: 60px;
 }
