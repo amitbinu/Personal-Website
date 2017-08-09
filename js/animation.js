@@ -1,36 +1,47 @@
 $(document).ready(function(){
-	$('.fa').hide(1);
-	$('#Projects').hide(1);
-	$('.Project').fadeOut(1);
+	$('.fa').hide();
+	$('#Projects').hide();
+	$('.Project').hide();
 	$('.fa-apple').show();
+
+	
 
 	var showProjects = function(){
 		$('#Projects').show(2500);
 		$('.Project').fadeIn(1500);
+		$('.Project').click(function(){
+			$(this).effect("shake");
+		});
 	};
 
-	$('.fa-envelope-o').effect('bounce',{times:4},1800);
-	//$('.fa-envelope-o').fadeIn(5000);
-	$('.fa-twitter').effect('bounce',{times:4},1800);
-	$('.fa-github').effect('bounce',{times:4},1800);
-	$('.fa-linkedin').effect('bounce',{times:4, duration:1800,complete: showProjects
-});
+	var showTwitter = function(){
+		$('.fa-twitter').fadeIn({duration:800, complete: showgithub});
+	};
 
+	$('.fa-envelope-o').fadeIn({duration:1000, complete: showTwitter});
+	
+	
+	var showLinkedin = function(){
+		$('.fa-linkedin').fadeIn({duration:800, complete: showProjects});
+	};
+
+	var showgithub = function(){
+		$('.fa-github').fadeIn({duration:800, complete: showLinkedin});
+	};
 	var hovered =function(){	
 		var width = $(this).width();
 		var height = $(this).height();
-		//$(this).find('.fa').stop(true,true).slideUp(600);
+		$(this).find('.fa').stop(true,true).animate({fontSize: "3vw"},500);
+	//	$(this).find('.fa').stop(true,true).effect("scale",{percent : "10"});
 		$(this).height(height);
 		$(this).width(width);
 	};
 
 	var notHovering = function(){
-		//$(this).find('.fa').stop(true,true).slideDown(600);
+		$(this).find('.fa').stop(true,true).animate({fontSize: "5vw"},300);
 		$(this).height('100%');
-		$(this).width('auto');
 	};
-	
-	$('a').hover(hovered,notHovering);
-	//$('.Project').hide();
+
+	$('contact').hover(hovered,notHovering);
 	
 });
