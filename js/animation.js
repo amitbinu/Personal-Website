@@ -7,11 +7,8 @@ $(document).ready(function(){
 	
 
 	var showProjects = function(){
-		$('#Projects').show(2500);
+		$('#Projects').show(2000);
 		$('.Project').fadeIn(1500);
-		$('.Project').click(function(){
-			$(this).effect("shake");
-		});
 	};
 
 	var showTwitter = function(){
@@ -42,6 +39,6 @@ $(document).ready(function(){
 		$(this).height('100%');
 	};
 
-	$('contact').hover(hovered,notHovering);
+	$('.contactInfo').hover(hovered,notHovering);
 	
 });
