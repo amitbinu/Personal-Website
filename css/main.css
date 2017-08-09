@@ -31,11 +31,10 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	letter-spacing: 3px;
-	
 	position: relative;
 }
 #Name{
-	font-size: 100px;
+	font-size: 8rem;
 	background: -webkit-linear-gradient(#777777,#050505);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -184,7 +183,7 @@ a:hover{
 
 #Projects{
 	color: #ffffff;
-	font-size: 4em;
+	font-size: 4rem;
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
@@ -258,60 +257,72 @@ a:hover{
 }
 
 #yummy-Java{
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	position: relative;
 	margin: auto;
-	margin-right:5px;
 	text-align: center;
 }
 
 
 
-.firstTool, .SecondTool, .ThirdTool, .githubCode{
+.firstTool, .SecondTool, .ThirdTool, .githubCode, .projectUrl{
 	display: inline-flex;
 	position: absolute;
-	top: 10%;
-	right: 0;
-}
-
-.firstTool{
-	text-align: left;
-	margin-top: 90px;
-	margin-right: 10px;
+	top: 30%;
+	right: 1%;
 }
 
 .SecondTool{
 	text-align: left;
-	margin-top: 130px;
-	margin-right: 12.5px;
+	top: 40%;
 }
 
 .ThirdTool{
-	margin-top: 170px;
-	margin-right: 12.5px;
+	top: 50%;
 }
 
 .githubCode{
 	display: block;
 	text-decoration: none;
+	margin-right: 5%;
 }
 #yummyGithub{
-	margin-top: 170px;
-	margin-right: 12.5px;
+	top: 50%;
 }
 
 #pokeitGithub{
-	margin-top: 210px;
-	margin-right: 12.5px;
+	top: 60%;
 }
 
-.githubCode h3{
-	text-decoration: none;	
+#yummyURL{
+	top: 66%;
+}
+#pokeitURL{
+	top: 76%;
+	
+}
+.projectUrl h3{
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 100;
+	font-weight: 400;
+	color: #ffffff;
+	font-size: 1.2rem;
+	margin: 0 auto;	
+}
+.projectUrl{
+	right: 2.2%;
+	padding: 5px;
+	background-image: -webkit-linear-gradient(#00bf8f,#001510);
+	text-decoration: none !important;
+	border-radius: 2px;
+}
+
+.githubCode h3{	
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	color: #000000;
-	font-size: 1.2vw;
+	font-size: 1.2rem;
 	margin: 0 auto;
+	text-decoration:none !important;
 }
 #GitImg{
 	font-size: 2rem!important;
@@ -323,15 +334,69 @@ a:hover{
 }
 .description{
 	font-family: 'Josefin Sans', sans-serif;
-	font-size: 1.75em;
+	font-size: 1.75rem;
 	font-weight: 100 !important;
 	width: 40%;
-	margin-top: 1vw;
+	margin-top: 5%;
 	margin-left: 60px;
 }
 
+@media(max-width: 1040px){
+	#Projects{
+		font-size: 3.5rem;
+	}
+	.Line1, .Line2{
+		width: 34%;
+	}
+}
+
 @media (max-width: 880px){
+	#Name{
+		font-size: 7rem;
+	}
 	.Project{
 		width: 90%;
+	}
+	#Projects{
+		font-size: 3rem;
+	}
+	.Line1, .Line2{
+		width: 33%;
+	}
+}
+
+@media(max-width: 800px){
+	.projectName{
+		font-size: 2.5rem;
+	}
+	#YummyIcon, #PokeitIcon{
+		width: 80px;
+		height: 80px;
+	}
+
+	.description{
+		width: 45%;
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 580px){
+	#Name{
+		font-size: 5rem;
+	}
+	#Projects{
+		font-size: 2.5rem;
+	}
+	.Line1, .Line2{
+		width: 28%;
+	}
+
+}
+
+@media (max-width: 480px){
+	#Projects{
+		font-size: 2rem;
+	}
+	.Line1, .Line2{
+		width: 26%;
 	}
 }
