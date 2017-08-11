@@ -1,4 +1,6 @@
 
+var x = 5;
+var y =20;
 
 window.onload = function(){
 	canv = document.getElementById("binaryNums");
@@ -6,86 +8,39 @@ window.onload = function(){
 	header = document.getElementById("Header");
 	header.height= window.innerHeight;
 	var startAnimation01 = setInterval(animate0s1s,1000/35);
+
 }
 
-var randomNumbers = [];
-var randomNumbers2=[];
-var randomNumbers3 =[];
-var randomNumbers4 =[];
-var randomNumbers5 =[];
-var x = 7;
-var y =20;
-
-
-	
-for(var i =0; i < 10; i++){
-	var num = new makeNumber(x,y,((getRandomIntInclusive(0,1))));
-	var num2 = new makeNumber(x,y+20,((getRandomIntInclusive(0,1))));
-	var num3 = new makeNumber(x,y+40,((getRandomIntInclusive(0,1))));
-	var num4 = new makeNumber(x,y+60,((getRandomIntInclusive(0,1))));
-	var num5 = new makeNumber(x,y+80,((getRandomIntInclusive(0,1))));
-	randomNumbers.push(num);
-	randomNumbers2.push(num2);
-	randomNumbers3.push(num3);
-	randomNumbers4.push(num4);
-	randomNumbers5.push(num5);
-	x+=20;
-}
-
-	for(var rows =0; rows<3; rows++){
-	for (var columns = 0; columns<10; columns++){
+var allNumbers = [];
+	for(var rows =0; rows<10; rows++){
+		var row1 = [];
+	for (var columns = 0; columns<20; columns++){
 		var num = new makeNumber(x,(y+(rows*20)),((getRandomIntInclusive(0,1))));
+		row1.push(num);
 		x+=20;
 	}
-	x=0;
+	allNumbers.push(row1);
+	x=5;
 }
 
 var animate0s1s = function(){
 	
-	ctx.fillStyle= "#2b2b2b";
+	ctx.fillStyle= "#000000";
 	ctx.fillRect(0,0,canv.width,canv.height);
 
 
-	for(var i =0 ; i < 10; i++){
-		ctx.font="bold 12px";
-		ctx.fillStyle="#65ff00";
-		ctx.fillText(randomNumbers[i].num+"",randomNumbers[i].x, randomNumbers[i].y);
-
-		ctx.font="bold 12px";
-		ctx.fillStyle="#65ff00";
-		ctx.fillText(randomNumbers2[i].num+"",randomNumbers2[i].x, randomNumbers2[i].y);
-
-		ctx.font="bold 12px Verdana";
-		ctx.fillStyle="#65ff00";
-		ctx.fillText(randomNumbers3[i].num+"",randomNumbers3[i].x, randomNumbers3[i].y);
-
-		ctx.font="bold 12px Verdana";
-		ctx.fillStyle="#65ff00";
-		ctx.fillText(randomNumbers4[i].num+"",randomNumbers4[i].x, randomNumbers4[i].y);
-
-		ctx.font="bold 12px Verdana";
-		ctx.fillStyle="#65ff00";
-		ctx.fillText(randomNumbers5[i].num+"",randomNumbers5[i].x, randomNumbers5[i].y);
-
-		randomNumbers[i].y-= 1;
-		randomNumbers2[i].y-= 1;
-		randomNumbers3[i].y-= 1;
-		randomNumbers4[i].y-= 1;
-		randomNumbers5[i].y-= 1;
-		if(randomNumbers[i].y === 0){
-			update(randomNumbers);
-		}
-		if(randomNumbers2[i].y === 0){
-			update(randomNumbers2);
-		}
-		if(randomNumbers3[i].y === 0){
-			update(randomNumbers3);
-		}
-		if(randomNumbers4[i].y === 0){
-			update(randomNumbers4);
-		}
-		if(randomNumbers5[i].y === 0){
-			update(randomNumbers5);
+	for(var row =0 ; row < 10; row++){
+		var row1 = allNumbers[row];
+		for (var column= 0; column < 20; column++) {
+			ctx.font = "bold 15px Verdana";
+			ctx.fillStyle="#65ff00";
+			ctx.fillText(row1[column].num+"",row1[column].x, row1[column].y);
+			ctx.font="bold 16px";
+			row1[column].y -= 1;
+			if(row1[column].y === 0){
+				update(row1);
+				allNumbers[row]= row1;
+			}
 		}
 	}
 
@@ -94,7 +49,7 @@ var animate0s1s = function(){
 
 var update = function(randomNumbersParam){
 	randomNumbersParam.forEach(function(element){
-		element.y=105;
+		element.y=canv.height+50;
 		element.num = getRandomIntInclusive(0,1);
 	});
 	
