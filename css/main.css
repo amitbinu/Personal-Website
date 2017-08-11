@@ -195,7 +195,7 @@ a:hover{
 	margin: auto;
 	background: #0072ff;
 	width:38%;
-	height: 0.5px;
+	height: 0.25%;
 }
 
 .Project{
@@ -212,8 +212,8 @@ a:hover{
 	}
 
 #YummyIcon, #PokeitIcon{
-	margin-top: 30px;
-	margin-left: 20px;
+	margin-top: 1%;
+	margin-left: 1%;
 }
 
 
@@ -228,7 +228,7 @@ a:hover{
 	font-size: 3rem;
 	margin: auto 0;
 	position: relative;
-	margin-top: 45px;
+	margin-top: 2%;
 	margin-bottom: 30px;
 }
 
@@ -258,62 +258,48 @@ a:hover{
 
 #yummy-Java{
 	font-size: 1.5rem;
-	position: relative;
 	margin: auto;
 	text-align: center;
 }
 
-
-
-.firstTool, .SecondTool, .ThirdTool, .githubCode, .projectUrl{
-	display: inline-flex;
+.info{
+	display: table;
+	margin:0 auto;
 	position: absolute;
 	top: 30%;
-	right: 1%;
+	right: 0;
 }
 
-.SecondTool{
-	text-align: left;
-	top: 40%;
+.firstTool, .SecondTool, .ThirdTool, .projectUrl{
+	display: inline-flex;
 }
-
-.ThirdTool{
-	top: 50%;
+.SecondTool, .ThirdTool, .githubCode{
+	margin-top: 5%;
 }
 
 .githubCode{
 	display: block;
 	text-decoration: none;
-	margin-right: 5%;
-}
-#yummyGithub{
-	top: 50%;
+	width: auto;
 }
 
-#pokeitGithub{
-	top: 60%;
-}
-
-#yummyURL{
-	top: 66%;
-}
-#pokeitURL{
-	top: 76%;
-	
-}
 .projectUrl h3{
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
+	font-weight: 400 !important;
 	color: #ffffff;
+	padding: 0 0.5px;
 	font-size: 1.2rem;
 	margin: 0 auto;	
 }
 .projectUrl{
 	right: 2.2%;
 	padding: 5px;
-	background-image: -webkit-linear-gradient(#00bf8f,#001510);
+	background-image: -webkit-linear-gradient(#6441A5,#2a0845);
 	text-decoration: none !important;
 	border-radius: 2px;
+	display: table;
+	margin: 0 auto;
+	margin-top: 5%;
 }
 
 .githubCode h3{	
@@ -321,14 +307,15 @@ a:hover{
 	font-weight: 300;
 	color: #000000;
 	font-size: 1.2rem;
-	margin: 0 auto;
 	text-decoration:none !important;
+	display: table;
+	margin:0 auto;
+
 }
-#GitImg{
-	font-size: 2rem!important;
-	background: -webkit-linear-gradient(#000000,#000000);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+
+#git1, #git2{
+	font-size: 2rem !important;
+	color: black !important;
 	display: table;
 	margin:0 auto;
 }
@@ -338,7 +325,7 @@ a:hover{
 	font-weight: 100 !important;
 	width: 40%;
 	margin-top: 5%;
-	margin-left: 60px;
+	margin-left: 5%;
 }
 
 @media(max-width: 1040px){
@@ -369,6 +356,9 @@ a:hover{
 	.projectName{
 		font-size: 2.5rem;
 	}
+	.Project{
+		width: 90%;
+	}
 	#YummyIcon, #PokeitIcon{
 		width: 80px;
 		height: 80px;
@@ -383,6 +373,9 @@ a:hover{
 	#Name{
 		font-size: 5rem;
 	}
+	.Project{
+		width: 90%;
+	}
 	#Projects{
 		font-size: 2.5rem;
 	}
@@ -396,7 +389,13 @@ a:hover{
 	#Projects{
 		font-size: 2rem;
 	}
+	.Project{
+		width: 90%;
+	}
 	.Line1, .Line2{
 		width: 26%;
+	}
+	.info{
+		top: 30%;
 	}
 }
