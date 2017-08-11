@@ -12,7 +12,22 @@ body{
 	height: 100%;
 	overflow-x: hidden;
 	}
+#buttons{
+	display: block;
+	position: fixed;
+	right: 1%;
+	bottom: 1%;
+}
 
+#up, #down{
+	cursor: pointer;
+	display: block;
+	width: 3rem;
+	height: 3rem;
+}
+#down{
+	margin-top: 30%;
+}
 #Header{
 	margin: 0;
 	text-align: center;
@@ -47,7 +62,7 @@ body{
 
 #titleName h1{
 	font-weight: 100;
-	font-size: 30px;
+	font-size: 2rem !important;
 }
 
 
@@ -211,7 +226,7 @@ a:hover{
 	display: none;
 	}
 
-#YummyIcon, #PokeitIcon{
+#YummyIcon, #PokeitIcon,#remindVoiceIcon, #PpIcon{
 	margin-top: 1%;
 	margin-left: 1%;
 }
@@ -256,25 +271,21 @@ a:hover{
 	background: #a4ff11;
 }
 
-#yummy-Java{
-	font-size: 1.5rem;
-	margin: auto;
-	text-align: center;
-}
-
 .info{
 	display: table;
 	margin:0 auto;
 	position: absolute;
-	top: 30%;
-	right: 0;
+	top: 20%;
+	right: 0.5%;
 }
 
 .firstTool, .SecondTool, .ThirdTool, .projectUrl{
 	display: inline-flex;
+	font-size: 1rem;
 }
 .SecondTool, .ThirdTool, .githubCode{
-	margin-top: 5%;
+	margin: auto;
+	padding: 0;
 }
 
 .githubCode{
@@ -313,7 +324,7 @@ a:hover{
 
 }
 
-#git1, #git2{
+#git1, #git2, #git3, #git4{
 	font-size: 2rem !important;
 	color: black !important;
 	display: table;
@@ -341,6 +352,18 @@ a:hover{
 	#Name{
 		font-size: 7rem;
 	}
+	#titleName h1{
+	font-size: 1.5rem !important;
+	}
+	#buttons{
+	right: 0;
+	bottom: 0;
+	}
+
+#up, #down{
+	width: 2rem;
+	height: 2rem;
+}
 	.Project{
 		width: 90%;
 	}
@@ -363,19 +386,36 @@ a:hover{
 		width: 80px;
 		height: 80px;
 	}
+	
 
 	.description{
 		width: 45%;
 		font-size: 1.5rem;
 	}
 }
+@media (max-width: 680px){
+	#up, #down{
+	width: 1.5rem;
+	height: 1.5rem;
+	}
+}
 @media (max-width: 580px){
 	#Name{
 		font-size: 5rem;
 	}
+	#titleName h1{
+	font-size: 1rem !important;
+	}
+	#OneLine{
+		width: 90%;
+	}
+	.contact{
+		font-size: 8vw !important;
+	}
 	.Project{
 		width: 90%;
 	}
+	
 	#Projects{
 		font-size: 2.5rem;
 	}
@@ -392,10 +432,20 @@ a:hover{
 	.Project{
 		width: 90%;
 	}
+	#up, #down{
+	width: 1.2rem;
+	height: 1.2rem;
+	}
 	.Line1, .Line2{
 		width: 26%;
 	}
 	.info{
 		top: 30%;
+	}
+}
+
+@media (max-width: 380px){
+	#buttons{
+		display: none;
 	}
 }
