@@ -3,12 +3,72 @@ $(document).ready(function(){
 	$('#Projects').hide();
 	$('.Project').hide();
 	$('.fa-apple').show();
+	$("#buttons").hide();
+	var current = 0;
+	$('#down').click(function(){
+		console.log(current);
+		switch(current){
+			case 0:
+				$('html, body').stop().animate({scrollTop: $('#Projects').offset().top},1000);
+				current++;
+				break;
+			case 1:
+				$('html, body').stop().animate({scrollTop: $('#Yummy').offset().top},1000);
+				current++;
+				break;
+			case 2:
+				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top},1000);
+				current++;
+				break;
 
+			case 3:
+				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top},1000);
+				current++;
+				break;
+
+			case 4:
+				$('html, body').stop().animate({scrollTop: $('#PatientsPal').offset().top},1000);
+				current++;
+				break;
+				}
+		
+	});
+
+	$('#up').click(function(){
+		switch(current){
+			case 1:
+				$('html, body').stop().animate({scrollTop: $('html, body').offset().top},1000);
+				current = 0;
+				break;
+			case 2:
+				$('html, body').stop().animate({scrollTop: $('#Projects').offset().top},1000);
+				current--;
+				break;
+			case 3:
+				$('html, body').stop().animate({scrollTop: $('#Yummy').offset().top},1000);
+				current--;
+				break;
+
+			case 4:
+				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top},1000);
+				current--;
+				break;
+
+			case 5:
+				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top},1000);
+				current--;
+				break;
+				}
+		
+	});
 	
 
 	var showProjects = function(){
 		$('#Projects').show(2000);
 		$('.Project').fadeIn(1500);
+		if($('body').innerWidth() > 380){
+			$("#buttons").fadeIn(1000);
+		}
 	};
 
 	var showTwitter = function(){
