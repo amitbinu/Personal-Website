@@ -15,15 +15,15 @@ body{
 #buttons{
 	display: block;
 	position: fixed;
-	right: 1%;
+	right: 0.5%;
 	bottom: 1%;
 }
 
 #up, #down{
 	cursor: pointer;
 	display: block;
-	width: 3rem;
-	height: 3rem;
+	width: 5rem;
+	height: 5rem;
 }
 #down{
 	margin-top: 30%;
@@ -99,7 +99,8 @@ body{
 
 
 .bezel{
-	border: 0.5vw solid #494949;
+	border: 0.5vw solid #000000;
+	border-radius: 3px;
 	height: 6.8vw;
 	border-top-width: 1vw;
 	border-bottom-width: 1vw;
@@ -121,7 +122,7 @@ body{
 #camera{
 	width: 0.45vw;
 	height: 0.45vw;
-	background: black;
+	background: #494949;
 	position: absolute;
 	top: 0.3vw;
 	left: 48%;
@@ -184,12 +185,10 @@ a:hover{
 }
 
 .Heading{
-	position: relative;
 	margin-top: 5%;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	display: inline-flex;
 	align-items: center;
 	text-align: center;
 	display: flex;
@@ -212,6 +211,7 @@ a:hover{
 	width:38%;
 	height: 0.25%;
 }
+
 
 .Project{
 	width: 70%;
@@ -242,9 +242,7 @@ a:hover{
 .projectName{
 	font-size: 3rem;
 	margin: auto 0;
-	position: relative;
 	margin-top: 2%;
-	margin-bottom: 30px;
 }
 
 .round{
@@ -253,38 +251,51 @@ a:hover{
 	height: 15px;
 	position: relative;
 	right: 5px;
+	display: flex;
 }
 .one{
 	position: relative;
-	margin: auto;
+	margin: 0;
 	background: #ff5bb8;
 }
 
 .two{
 	position: relative;
-	margin: auto;
+	margin: 0;
 	background: #5487f7;
 }
 
 .third{
-	margin: auto;
+	margin: 0;
 	background: #a4ff11;
 }
 
 .info{
-	display: table;
-	margin:0 auto;
+	display: block;
+	margin:0;
 	position: absolute;
 	top: 20%;
 	right: 0.5%;
 }
+.round, .tools h3{
+	margin: 0;
+	display: inline-flex;
+	margin-top: 8%;
+}
 
 .firstTool, .SecondTool, .ThirdTool, .projectUrl{
-	display: inline-flex;
-	font-size: 1rem;
+	font-size: 1.25rem;
+}
+.tools{
+	margin: 0;
+	display: block;
+}
+
+.tools h3{
+	font-weight: 100 !important;
 }
 .SecondTool, .ThirdTool, .githubCode{
-	margin: auto;
+	margin: 0;
 	padding: 0;
 }
 
@@ -292,6 +303,7 @@ a:hover{
 	display: block;
 	text-decoration: none;
 	width: auto;
+	margin-top: 8%;
 }
 
 .projectUrl h3{
@@ -394,10 +406,57 @@ a:hover{
 	}
 }
 @media (max-width: 680px){
+
+	
 	#up, #down{
 	width: 1.5rem;
 	height: 1.5rem;
 	}
+	.Project{
+		height: auto;
+	}
+	.description{
+		width: auto;
+	}
+	.info{
+		position: static;
+	}
+	.tools{
+		display: inline-block;
+		margin-top: 5%;
+		margin-left: 5%;
+	}
+
+
+	.links{
+		position: static;
+		margin-top: 5%;
+		padding: 8%;
+	}
+	.round, .tools h3{
+		margin: 0;
+		display: inline-flex;
+	}
+
+
+
+	.githubCode, .projectUrl {
+		position: static;
+		display: inline-block;
+		margin: auto;
+	}
+
+	.githubCode{
+		position: absolute;
+		bottom: 1%;
+		left: 1%;
+	}
+	.projectUrl{
+		position: absolute;
+		right:1%;
+		bottom: 1%;	}
+
+
 }
 @media (max-width: 580px){
 	#Name{
@@ -439,13 +498,32 @@ a:hover{
 	.Line1, .Line2{
 		width: 26%;
 	}
-	.info{
-		top: 30%;
+	
+}
+
+@media (max-width: 400px){
+	.links{
+		margin-top: 3%;
+		padding: 15%;
+	}
+
+	.Project{
+		width: auto;
 	}
 }
 
-@media (max-width: 380px){
-	#buttons{
-		display: none;
+@media(max-width: 270px){
+	.Project span{
+		display: block;
+	}
+	.links{
+		padding: 25%;
+	}
+	.githubCode, .projectUrl {
+		position: static;
+		display: block;
+		margin-top: 5%;
+		margin-left: 5%;
+		padding: 0;
 	}
 }
