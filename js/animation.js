@@ -3,72 +3,90 @@ $(document).ready(function(){
 	$('#Projects').hide();
 	$('.Project').hide();
 	$('.fa-apple').show();
-	$("#buttons").hide();
+	//$("#buttons").hide();
+	$("#up").hide();
+	$("#down").hide();
 	var current = 0;
+	$(window).scroll(function(){
+		var num = $(this).scrollTop();
+		if(num > $("#RemindVoice").offset().top){
+			$("#up").fadeIn(1000);
+		}
+		else{
+			$("#up").fadeOut(1000);
+		}
+		if (num < ($("#Projects").offset().top)) {
+			$("#down").fadeIn(1000);
+			
+		}
+		if (num >= $("#Projects").offset().top) {$("#down").fadeOut(1000);};
+		
+	});
 	$('#down').click(function(){
 		console.log(current);
-		switch(current){
+		$('html, body').stop().animate({scrollTop: $('#Projects').offset().top+5},1000);
+	/*	switch(current){
 			case 0:
 				$('html, body').stop().animate({scrollTop: $('#Projects').offset().top},1000);
 				current++;
 				break;
 			case 1:
-				$('html, body').stop().animate({scrollTop: $('#Yummy').offset().top},1000);
+				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top-10},1000);
 				current++;
 				break;
+
 			case 2:
-				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top},1000);
+				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top-10},1000);
 				current++;
 				break;
 
 			case 3:
-				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top},1000);
+				$('html, body').stop().animate({scrollTop: $('#PatientsPal').offset().top-10},1000);
 				current++;
 				break;
-
-			case 4:
-				$('html, body').stop().animate({scrollTop: $('#PatientsPal').offset().top},1000);
-				current++;
-				break;
-				}
+				}*/
 		
 	});
 
 	$('#up').click(function(){
-		switch(current){
-			case 1:
+		console.log(current);
+		$('html, body').stop().animate({scrollTop: $('html, body').offset().top},1000);
+		/*switch(current){
+			case 0:
 				$('html, body').stop().animate({scrollTop: $('html, body').offset().top},1000);
 				current = 0;
 				break;
-			case 2:
+			case 1:
 				$('html, body').stop().animate({scrollTop: $('#Projects').offset().top},1000);
 				current--;
 				break;
-			case 3:
-				$('html, body').stop().animate({scrollTop: $('#Yummy').offset().top},1000);
+			case 2:
+				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top-10},1000);
 				current--;
 				break;
+
+			case 3:
+				
 
 			case 4:
-				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top},1000);
+				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top-10},1000);
 				current--;
 				break;
-
-			case 5:
-				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top},1000);
-				current--;
-				break;
-				}
+				}*/
 		
 	});
 	
 
 	var showProjects = function(){
+		$("#aboutMe").text("About Me");
+		$('#aboutMe').show(4000);
 		$('#Projects').show(2000);
 		$('.Project').fadeIn(1500);
-		if($('body').innerWidth() > 380){
-			$("#buttons").fadeIn(1000);
+		if($('body').innerWidth() > 680){
+			$("#down").fadeIn(1000);
 		}
+
+	console.log($("#Projects").offset().top);
 	};
 
 	var showTwitter = function(){
