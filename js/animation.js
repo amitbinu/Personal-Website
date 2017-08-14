@@ -10,70 +10,29 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		var num = $(this).scrollTop();
 		if(num > $("#RemindVoice").offset().top){
-			$("#up").fadeIn(1000);
+			$("down").hide();
+			$("#up").fadeIn(500);
 		}
 		else{
-			$("#up").fadeOut(1000);
+			$("#up").fadeOut(500);
 		}
 		if (num < ($("#Projects").offset().top)) {
-			$("#down").fadeIn(1000);
+			$("#up").hide();
+			$("#down").fadeIn(500);
 			
 		}
-		if (num >= $("#Projects").offset().top) {$("#down").fadeOut(1000);};
+		if (num >= $("#Projects").offset().top) {$("#down").fadeOut(500);};
 		
 	});
 	$('#down').click(function(){
 		console.log(current);
 		$('html, body').stop().animate({scrollTop: $('#Projects').offset().top+5},1000);
-	/*	switch(current){
-			case 0:
-				$('html, body').stop().animate({scrollTop: $('#Projects').offset().top},1000);
-				current++;
-				break;
-			case 1:
-				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top-10},1000);
-				current++;
-				break;
-
-			case 2:
-				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top-10},1000);
-				current++;
-				break;
-
-			case 3:
-				$('html, body').stop().animate({scrollTop: $('#PatientsPal').offset().top-10},1000);
-				current++;
-				break;
-				}*/
 		
 	});
 
 	$('#up').click(function(){
 		console.log(current);
 		$('html, body').stop().animate({scrollTop: $('html, body').offset().top},1000);
-		/*switch(current){
-			case 0:
-				$('html, body').stop().animate({scrollTop: $('html, body').offset().top},1000);
-				current = 0;
-				break;
-			case 1:
-				$('html, body').stop().animate({scrollTop: $('#Projects').offset().top},1000);
-				current--;
-				break;
-			case 2:
-				$('html, body').stop().animate({scrollTop: $('#PokeIt').offset().top-10},1000);
-				current--;
-				break;
-
-			case 3:
-				
-
-			case 4:
-				$('html, body').stop().animate({scrollTop: $('#RemindVoice').offset().top-10},1000);
-				current--;
-				break;
-				}*/
-		
 	});
 	
 
@@ -86,7 +45,7 @@ $(document).ready(function(){
 			$("#down").fadeIn(1000);
 		}
 
-	console.log($("#Projects").offset().top);
+		$("#y2").show("slide", {direction: "left"},1000);
 	};
 
 	var showTwitter = function(){
