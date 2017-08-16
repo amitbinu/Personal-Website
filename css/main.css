@@ -356,7 +356,7 @@ a:hover{
 	font-size: 1.75rem;
 	font-weight: 100 !important;
 	width: 40%;
-	margin-top: 10%;
+	margin-top: 5%;
 	margin-left: 5%;
 }
 .about{
@@ -364,7 +364,7 @@ a:hover{
 }
 .nexus{
 	position: relative;
-	border: 1px solid black;
+	border: 1.5px solid black;
 	width: 155px;
 	height: 300px;
 	background: white;
@@ -411,12 +411,68 @@ a:hover{
 	height: 350px;
 	border: 1px solid #000000;
 }
+
+.ipad{
+	margin-left: 5%;
+	border: 1.5px solid #000000;
+	background: #ffffff;
+	width: 450px;
+	height: 300px;
+	position: relative;
+	border-radius: 6px;
+}
+
+.ipadScreen{
+	width: 90%;
+	height: 295px;
+	margin-left: 4%;
+	background: #000000;
+	margin-top: 2.5px;
+	position: relative;
+}
+#patientsPalScreen{
+	position: absolute;
+	top: 35px;
+	width: 100%;
+	font-family: 'Just Another Hand', cursive;
+	letter-spacing: 4px;
+	text-align: center;
+	color: red;
+	font-weight: 100 !important;
+	font-size: 4rem !important;
+}
+
+.ipadCamera{
+	position: absolute;
+	left: 1%;
+	top: 50%;
+	border-radius: 100%;
+	width: 5px;
+	height: 5px;
+	background: #000000;
+}
+.nexus{
+	display: none;
+}
+.ipadbutton{
+	position: absolute;
+	right: 1%;
+	top:48%;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #000000;
+	border-radius: 100%;
+}
+
 @media(max-width: 1040px){
 	#Projects{
 		font-size: 3.5rem;
 	}
 	.Line1, .Line2{
 		width: 34%;
+	}
+	.nexus{
+		margin-left: 5%;
 	}
 }
 
@@ -475,6 +531,9 @@ a:hover{
 }
 @media (max-width: 680px){
 
+	#buttons{
+		display: none;
+	}
 	.nexus{
 		display: none;
 	}
@@ -492,6 +551,7 @@ a:hover{
 		height: auto;
 	}
 	.description{
+		margin-top: 8%;
 		width: auto;
 	}
 	.info{
@@ -499,11 +559,11 @@ a:hover{
 	}
 	.tools{
 		display: inline-block;
-		margin-top: 5%;
+		margin-top: 1%;
 		margin-left: 5%;
 	}
 
-
+	
 	.links{
 		position: static;
 		margin-top: 5%;
@@ -530,8 +590,15 @@ a:hover{
 	.projectUrl{
 		position: absolute;
 		right:1%;
-		bottom: 1%;	}
+		bottom: 1%;
+	}
 
+	.githubCode:hover{
+		background: none !important;
+	}
+	.projectUrl:hover{
+		background-image: -webkit-linear-gradient(#6441A5,#2a0845);
+	}
 
 }
 @media (max-width: 580px){
