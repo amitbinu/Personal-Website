@@ -80,7 +80,10 @@ body{
 }
 
 .laptop{
-	border: 1px solid #bababa;
+	border: 1.5px solid #bababa;
+	background: #000000;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
 	border-bottom-color: transparent;
 	width: 13.2vw;
 	height: 8.7vw;
@@ -92,19 +95,13 @@ body{
 #binaryNums{
 	position: absolute;
 	top: 1vw;
-	left: 1.6vw;
-	width : 12.2vw;
-	height:7vw;
+	left: 1.5vw;
+	width : 12.4vw;
+	height:7.4vw;
 }
 
 
-.bezel{
-	border: 0.5vw solid #000000;
-	border-radius: 3px;
-	height: 6.8vw;
-	border-top-width: 1vw;
-	border-bottom-width: 1vw;
-}
+
 
 .fa{
 	color: white;
@@ -405,9 +402,6 @@ a:hover{
 	border-radius: 100%;
 }
 
-#y2{
-	display: none;
-}
 #ppPict{
 	position: relative;
 	bottom: 5px;
@@ -428,10 +422,10 @@ a:hover{
 
 .ipadScreen{
 	width: 90%;
-	height: 295px;
+	height: 288px;
 	margin-left: 4%;
 	background: #000000;
-	margin-top: 2.5px;
+	margin-top: 6px;
 	position: relative;
 }
 #patientsPalScreen{
@@ -550,6 +544,9 @@ a:hover{
 
 	#buttons{
 		display: none;
+	}
+	.Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
+		font-size: 2vw !important;
 	}
 	.nexus{
 		display: none;
