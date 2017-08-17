@@ -49,18 +49,18 @@ $(document).ready(function(){
 	};
 
 	var showTwitter = function(){
-		$('.fa-twitter').fadeIn({duration:800, complete: showgithub});
+		$('.fa-twitter').fadeIn({duration:1000, complete: showgithub});
 	};
 
 	$('.fa-envelope-o').fadeIn({duration:1000, complete: showTwitter});
 	
 	
 	var showLinkedin = function(){
-		$('.fa-linkedin').fadeIn({duration:800, complete: showProjects});
+		$('.fa-linkedin').fadeIn({duration:1000, complete: showProjects});
 	};
 
 	var showgithub = function(){
-		$('.fa-github').fadeIn({duration:800, complete: showLinkedin});
+		$('.fa-github').fadeIn({duration:1000, complete: showLinkedin});
 	};
 	var hovered =function(){	
 		var width = $(this).width();
