@@ -1,5 +1,9 @@
-$(document).ready(function(){
+
+
 	
+
+$(document).ready(function(){
+
 	$('.fa').hide();
 	$('#Projects').hide();
 	$('.Project').hide();
@@ -8,12 +12,25 @@ $(document).ready(function(){
 	var current = 0;
 	var onlyOnce = true;
 	var noAnimation;
-	if ( $( window ).width() > 880) {
+	var positionFixed
+	if ( $( window ).width() > 880 || noAnimation === false ) {
 		noAnimation = false;
 	}
 	else{
 		noAnimation = true;
+		positionFixed = false;
 	}
+	document.addEventListener("touchstart", function(){
+		noAnimation = true;
+		positionFixed = false;
+	}, false);
+	document.addEventListener("touchmove", function(){
+		noAnimation = true;
+		positionFixed = false;
+	}, false);
+	
+
+	
 
 	var height = $('.Heading').offset().top -   $("#OneLine").offset().top - $("#OneLine").height();
 	var oldValues = {
@@ -24,21 +41,26 @@ $(document).ready(function(){
 		LinkedinWidth:$('.Linkedin').offset().left
 	};
 
-	var positionFixed = false;
+	 positionFixed = false;
 	$( window ).resize(function() {
 		$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
 	//	onlyOnce = false;
   	//	height = $('.Heading').offset().top -   $("#OneLine").offset().top - $("#OneLine").height();
-		if(onlyOnce === true){
+		
 			oldValues = {
 			height1 :  $('.Mail').offset().top,
 			MailWidth : $('.Mail').offset().left,
 			GithubWidth:$('.Github').offset().left ,
 			TwitterWidth:$('.Twitter').offset().left,
-			LinkedinWidth:$('.Linkedin').offset().left
+			LinkedinWidth:$('.Linkedin').offset().left,
+			height2: $('.Mail').position().top,
+			MailWidth2 : $('.Mail').position().left,
+			GithubWidth2:$('.Github').position().left ,
+			TwitterWidth2:$('.Twitter').position().left,
+			LinkedinWidth2:$('.Linkedin').position().left
 			};
-		}
-		if( $( window ).width() > 880 ){
+		
+		if( $( window ).width() > 880 && noAnimation === false){
 			noAnimation = false;
 		}
 		else{
@@ -65,7 +87,7 @@ $(document).ready(function(){
 			width = $('.Mail').position().left +($('.Mail').offset().left- $("#OneLine").offset().left)-20;
 			height =  num - 200;
 			console.log("width Mail " + width + " height Mail " + height);
-			$("#mail").animate({left:'-=' + width + 'px',top:"+="+height+'px'},1000,function(){});
+			$(".Mail").animate({left:'-=' + width + 'px',top:"+="+height+'px'},1000,function(){});
 
 			width =$(document).width() - $('.Github').offset().left - $('.Github').width() - 20;
 			console.log("width Github " + width + " height Github " + height);
@@ -98,6 +120,16 @@ $(document).ready(function(){
 			$(".Twitter").offset({top:height,left:width});
 			width = oldValues.LinkedinWidth;
 			$(".Linkedin").offset({top:height,left:width});
+			height = oldValues.height2;
+			width = oldValues.MailWidth2;
+			$(".Mail").position({top:height,left:width});
+			width = oldValues.GithubWidth2;
+			$(".Github").position({top:height,left:width});
+			width = oldValues.TwitterWidth2;
+			$(".Twitter").position({top:height,left:width});
+			width = oldValues.LinkedinWidth2;
+			$(".Linkedin").position({top:height,left:width});
+
 			$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
 		}
 
