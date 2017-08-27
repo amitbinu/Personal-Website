@@ -140,9 +140,7 @@ body{
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
-*{
-	border: 1px solid red;
-}
+
 .mouse{
 	width: 4vw;
 	height:0.24vw;
