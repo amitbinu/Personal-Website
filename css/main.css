@@ -223,7 +223,6 @@ a:hover{
 	position: relative;
 	margin-top: 5%;
 	background:#ffffff;
-	/*background-image: -webkit-linear-gradient(#00C9FF,#92FE9D);*/
 	background-image:  -webkit-linear-gradient(#8e9eab,#eef2f3);
 	display: none;
 	}
