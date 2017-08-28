@@ -1,7 +1,3 @@
-
-
-	
-
 $(document).ready(function(){
 
 	$('.fa').hide();
@@ -12,7 +8,7 @@ $(document).ready(function(){
 	var current = 0;
 	var onlyOnce = true;
 	var noAnimation;
-	var positionFixed
+	var positionFixed;
 	if ( $( window ).width() > 880 || noAnimation === false ) {
 		noAnimation = false;
 	}
@@ -20,17 +16,16 @@ $(document).ready(function(){
 		noAnimation = true;
 		positionFixed = false;
 	}
+
 	document.addEventListener("touchstart", function(){
 		noAnimation = true;
 		positionFixed = false;
 	}, false);
+
 	document.addEventListener("touchmove", function(){
 		noAnimation = true;
 		positionFixed = false;
 	}, false);
-	
-
-	
 
 	var height = $('.Heading').offset().top -   $("#OneLine").offset().top - $("#OneLine").height();
 	var oldValues = {
@@ -44,8 +39,6 @@ $(document).ready(function(){
 	 positionFixed = false;
 	$( window ).resize(function() {
 		$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
-	//	onlyOnce = false;
-  	//	height = $('.Heading').offset().top -   $("#OneLine").offset().top - $("#OneLine").height();
 		
 			oldValues = {
 			height1 :  $('.Mail').offset().top,
@@ -86,29 +79,25 @@ $(document).ready(function(){
 			onlyOnce = false;
 			width = $('.Mail').position().left +($('.Mail').offset().left- $("#OneLine").offset().left)-20;
 			height =  num - 200;
-			console.log("width Mail " + width + " height Mail " + height);
 			$(".Mail").animate({left:'-=' + width + 'px',top:"+="+height+'px'},1000,function(){});
 
 			width =$(document).width() - $('.Github').offset().left - $('.Github').width() - 20;
-			console.log("width Github " + width + " height Github " + height);
 			$(".Github").animate({top:"+="+height+'px',left:"+="+width+'px'},1000,function(){});
 
 			width = $('.Twitter').position().left +($('.Mail').offset().left- $("#OneLine").offset().left)-20;
 			height += 250;
-			console.log("width Twitter " + width + " height Twitter " + height);
 			$(".Twitter").animate({top:"+="+height+'px',left:"-="+width+'px'},1000,function(){});
 
 			width = $(document).width() - $('.Linkedin').offset().left - $('.Linkedin').width()- 20;
-			console.log("width Linkedin " + width + " height Linkedin " + height);	
 			$(".Linkedin").animate({top:"+="+height+'px',left:"+="+width+'px'},1000,function(){
 				positionFixed = true;
 			});
 			onlyOnce = false;
 
 		}
+
 		if (num < $("#OneLine").offset().top+$("#OneLine").height() && onlyOnce===false && !(noAnimation) === true) {
 			$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
-
 			positionFixed = false;
 			onlyOnce = true;
 			width = oldValues.MailWidth;
@@ -129,7 +118,6 @@ $(document).ready(function(){
 			$(".Twitter").position({top:height,left:width});
 			width = oldValues.LinkedinWidth2;
 			$(".Linkedin").position({top:height,left:width});
-
 			$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
 		}
 
@@ -169,8 +157,6 @@ $(document).ready(function(){
 		if($('body').innerWidth() > 680){
 			$("#down").fadeIn(1000);
 		}
-
-		$("#y2").show("slide", {direction: "left"},1000);
 	};
 
 	var showTwitter = function(){
