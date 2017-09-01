@@ -8,7 +8,6 @@ $(document).ready(function(){
 	var current = 0;
 	var onlyOnce = true;
 	var noAnimation;
-	var positionFixed;
 	if ( $( window ).width() > 880 || noAnimation === false ) {
 		noAnimation = false;
 	}
@@ -16,12 +15,10 @@ $(document).ready(function(){
 		noAnimation = true;
 		positionFixed = false;
 	}
-
 	document.addEventListener("touchstart", function(){
 		noAnimation = true;
 		positionFixed = false;
 	}, false);
-
 	document.addEventListener("touchmove", function(){
 		noAnimation = true;
 		positionFixed = false;
@@ -39,6 +36,8 @@ $(document).ready(function(){
 	 positionFixed = false;
 	$( window ).resize(function() {
 		$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
+	//	onlyOnce = false;
+  	//	height = $('.Heading').offset().top -   $("#OneLine").offset().top - $("#OneLine").height();
 		
 			oldValues = {
 			height1 :  $('.Mail').offset().top,
@@ -65,40 +64,42 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		var num = $(this).scrollTop();
 
-		if(positionFixed === true){
-			$('.contactInfo').css({position:"fixed", height:"auto",width:"5vw"});
-			$('.Mail').css({left:"1%",top:"200px",margin:"0"});
-			$('.Github').css({left:"94%",top:"200px",margin:"0"});
-
-			$('.Twitter').css({left:"1%",top:"450px",margin:"0"});
-			$('.Linkedin').css({left:"94%",top:"450px",margin:"0"});
-		}
+	
 
 		if(num > $("#OneLine").offset().top+$("#OneLine").height() && onlyOnce===true && !(noAnimation) === true){
 			$('.contactInfo').css({position:"relative"});
 			onlyOnce = false;
-			width = $('.Mail').position().left +($('.Mail').offset().left- $("#OneLine").offset().left)-20;
+			width = $('.Mail').offset().left -20;
 			height =  num - 200;
+			console.log("width Mail " + width + " height Mail " + height);
 			$(".Mail").animate({left:'-=' + width + 'px',top:"+="+height+'px'},1000,function(){});
 
 			width =$(document).width() - $('.Github').offset().left - $('.Github').width() - 20;
+			console.log("width Github " + width + " height Github " + height);
 			$(".Github").animate({top:"+="+height+'px',left:"+="+width+'px'},1000,function(){});
 
-			width = $('.Twitter').position().left +($('.Mail').offset().left- $("#OneLine").offset().left)-20;
+			width = $('.Twitter').offset().left - 20;
 			height += 250;
+			console.log("width Twitter " + width + " height Twitter " + height);
 			$(".Twitter").animate({top:"+="+height+'px',left:"-="+width+'px'},1000,function(){});
 
 			width = $(document).width() - $('.Linkedin').offset().left - $('.Linkedin').width()- 20;
+			console.log("width Linkedin " + width + " height Linkedin " + height);	
 			$(".Linkedin").animate({top:"+="+height+'px',left:"+="+width+'px'},1000,function(){
-				positionFixed = true;
+				$('.contactInfo').css({position:"fixed", height:"auto",width:"5vw"});
+				$('.Mail').css({left:"1%",top:"200px",margin:"0"});
+				$('.Github').css({left:"94%",top:"200px",margin:"0"});
+
+				$('.Twitter').css({left:"1%",top:"450px",margin:"0"});
+				$('.Linkedin').css({left:"94%",top:"450px",margin:"0"});
+				
 			});
 			onlyOnce = false;
 
 		}
-
 		if (num < $("#OneLine").offset().top+$("#OneLine").height() && onlyOnce===false && !(noAnimation) === true) {
 			$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
-			positionFixed = false;
+
 			onlyOnce = true;
 			width = oldValues.MailWidth;
 			height =oldValues.height1;
@@ -118,7 +119,9 @@ $(document).ready(function(){
 			$(".Twitter").position({top:height,left:width});
 			width = oldValues.LinkedinWidth2;
 			$(".Linkedin").position({top:height,left:width});
+
 			$('.contactInfo').css({ position:"static",height:"auto",width:"auto", margin:"auto"});
+
 		}
 
 	
@@ -157,6 +160,8 @@ $(document).ready(function(){
 		if($('body').innerWidth() > 680){
 			$("#down").fadeIn(1000);
 		}
+
+		$("#y2").show("slide", {direction: "left"},1000);
 	};
 
 	var showTwitter = function(){
