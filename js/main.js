@@ -50,6 +50,7 @@ var animate0s1s = function(){
 			ctx.font = "bold "+ fontSize+ " Verdana";
 			ctx.fillStyle="#65ff00";
 			ctx.fillText(row1[column].num+"",row1[column].x, row1[column].y);
+			ctx.font="bold 16px";
 			row1[column].y -= 1;
 			if(row1[column].y === 0){
 				update(row1);
