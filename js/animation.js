@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	//new WOW().init();
 	$('.fa').hide();
 	$('#Projects').hide();
 	$('.Project').hide();
@@ -153,8 +153,8 @@ $(document).ready(function(){
 	var showProjects = function(){
 		
 		$('#Projects').show(2000);
-		$('.Project').fadeIn(1500);
-
+		$('.Project').show();
+		new WOW().init();
 		$("#up").hide();
 		$("#buttons").show();
 		if($('body').innerWidth() > 680){
@@ -168,7 +168,13 @@ $(document).ready(function(){
 		$('.fa-twitter').fadeIn({duration:800, complete: showgithub});
 	};
 
-	$('.fa-envelope-o').fadeIn({duration:1000, complete: showTwitter});
+
+	var showMail = function(){
+		$('.fa-envelope-o').fadeIn({duration:1000, complete: showTwitter});
+	}
+
+	 var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+	 $('#Name').addClass('animated rubberBand').one(animationEnd, showMail);
 	
 	
 	var showLinkedin = function(){
