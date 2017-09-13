@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	//new WOW().init();
 	$('.fa').hide();
-	$('#Projects').hide();
+//	$('#Projects').hide();
 	$('.Project').hide();
 	$('.fa-apple').show();
 	$("#buttons").hide();
