@@ -8,6 +8,7 @@ body{
 	margin: 0;
 	padding: 0;
 	background: #304352;
+	background: #304352;
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
@@ -39,29 +40,8 @@ body{
     -ms-flex-align: center;
     align-items: center;
     background-image: -webkit-linear-gradient(#d7d2cc,#304352);
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
-#Me{
-	height: 20%;
-	z-index: 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
-
 }
 
-#Me2{
-	height: 20%;
-	z-index: 0;
-	position: fixed;
-	top: 0;
-	right: 0;
-	z-index: 2;
-}
 #Name, #titleName{
 	font-family: 'Cabin', sans-serif;
 	margin-left: auto;
@@ -92,7 +72,6 @@ body{
 	margin:auto;
 	display: inline-flex;
 	margin-top: 3vw;
-	height: 9.2vw;
 }
 .mac{
 	position: relative;	
@@ -114,22 +93,12 @@ body{
 
 }
 
-*{
-	z-index: 100;
-}
 #binaryNums{
 	position: absolute;
 	top: 1vw;
 	left: 1.5vw;
 	width : 12.4vw;
 	height:7.4vw;
-	/* width: 100%;
-	height: !100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0.055;
-	z-index: 10;*/
 }
 
 
@@ -191,7 +160,6 @@ body{
 	height: auto;
 	text-decoration: none;
 	position: static;
-	z-index: 100;
 }
 
 .contact{
@@ -227,8 +195,6 @@ a:hover{
 	text-align: center;
 	display: flex;
 	color: white;
-	background: #304352;
-	z-index: 1200;
 }
 
 #Projects{
@@ -237,7 +203,6 @@ a:hover{
 	font-weight: 100;
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	display: none;
 }
 
 .Line1, .Line2{
@@ -246,8 +211,6 @@ a:hover{
 	background: #0072ff;
 	width:38%;
 	height: 0.25%;
-	z-index: 1;
-
 }
 
 
@@ -257,12 +220,15 @@ a:hover{
 	margin: auto;
 	border-radius: 10px;
 	position: relative;
-	margin-top: 5%;
+	margin-top: 10%;
 	background:#ffffff;
+	/*background-image: -webkit-linear-gradient(#00C9FF,#92FE9D);*/
 	background-image:  -webkit-linear-gradient(#8e9eab,#eef2f3);
-	display: hidden;
 	}
 
+#Yummy{
+	margin-top: 7%;
+}
 #YummyIcon, #PokeitIcon,#remindVoiceIcon, #PpIcon{
 	margin-top: 1%;
 	margin-left: 1%;
@@ -405,6 +371,7 @@ a:hover{
 	height: 300px;
 	background: white;
 	border-radius: 3px;
+	margin-left: 13%;
 }
 
 .nexusScreen{
@@ -455,6 +422,7 @@ a:hover{
 	height: 300px;
 	position: relative;
 	border-radius: 6px;
+	margin-left: 2%;
 }
 
 .ipadScreen{
