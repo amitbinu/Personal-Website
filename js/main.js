@@ -1,83 +1,61 @@
+var numbers = [];
 
-var x = 1;
-var y =20;
-
-window.onload = function(){
-	canv = document.getElementById("binaryNums");
-	ctx=canv.getContext("2d");
-	header = document.getElementById("Header");
-	header.height= window.innerHeight;
-	var startAnimation01 = setInterval(animate0s1s,1000/35);
-
+function setup() {
+  var canvas = createCanvas(displayWidth, displayHeight);
+  canvas.position(0,0);
+  canvas.parent('binaryNums');
+  for (var i = 0; i < 200; i++) {
+    numbers[i] = new Number();
+  }
 }
 
-var changeValueX;
-var changeValueY;
-var fontSize;
-var windowWidth = $(window).width();
-	if(windowWidth > 800){
-		fontSize ="20px";
-		changeValueY = 40;
-		changeValueX = 20;
-	}
-	else{
-			fontSize = "40px";
-			changeValueY = 100;
-			changeValueX = 30;
-		
-	}
-var allNumbers = [];
-	for(var rows =0; rows<5; rows++){
-		var row1 = [];
-	for (var columns = 0; columns<20; columns++){
-		var num = new makeNumber(x,(y+(rows*changeValueY)),((getRandomIntInclusive(0,1))));
-		row1.push(num);
-		x+=changeValueX;
-	}
-	allNumbers.push(row1);
-	x=1;
+function draw() {
+  background(0);
+  translate(width / 2, height / 2);
+
+  for (var i = 0; i < numbers.length; i++) {
+    numbers[i].update();
+    numbers[i].show();
+  }
 }
 
-var animate0s1s = function(){
-	
-	ctx.fillStyle= "#494949";
-	ctx.fillRect(0,0,canv.width,canv.height);
-	
-	
-	for(var row =0 ; row < 5; row++){
-		var row1 = allNumbers[row];
-		for (var column= 0; column < 20; column++) {
-			ctx.font = "bold "+ fontSize+ " Verdana";
-			ctx.fillStyle="#65ff00";
-			ctx.fillText(row1[column].num+"",row1[column].x, row1[column].y);
-			ctx.font="bold 16px";
-			row1[column].y -= 1;
-			if(row1[column].y === 0){
-				update(row1);
-				allNumbers[row]= row1;
-			}
-		}
-	}
+function Number() {
+  this.x = random(-width, width);
+  this.y = random(-height, height);
+  this.z = random(width);
+  this.pz = this.z;
+  this.number = getRandomIntInclusive(0,1) + "";
+  this.update = function() {
 
-}
+    this.z = this.z - 5;
+    if (this.z < 1) {
+      this.z = width;
+      this.x = random(-width, width);
+      this.y = random(-height, height);
+      this.pz = this.z;
+    }
+  }
 
+  this.show = function() {
+    fill('#42f450');
+    noStroke();
 
-var update = function(randomNumbersParam){
-	randomNumbersParam.forEach(function(element){
-		element.y=canv.height+changeValueY;
-		element.num = getRandomIntInclusive(0,1);
-	});
-	
+    var sx = map(this.x / this.z, 0, 1, 0, width);
+    var sy = map(this.y / this.z, 0, 1, 0, height);
+
+    var r = map(this.z, 0, width, 16, 0);
+    textFont('Arial',20);
+    text(this.number,sx,sy);
+
+    var px = map(this.x / this.pz, 0, 1, 0, width);
+    var py = map(this.y / this.pz, 0, 1, 0, height);
+
+    this.pz = this.z;
+  }
 }
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function makeNumber(x,y,num){
-	this.x = x;
-	this.y = y;
-	this.num = num;
 }
