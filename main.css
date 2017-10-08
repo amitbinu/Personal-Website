@@ -1,0 +1,625 @@
+
+html{  
+	margin: 0;
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    width: 100%;
+    height: 100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	}
+
+#Header{
+	margin: 0;
+	text-align: center;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   /* background-image: -webkit-linear-gradient(#d7d2cc,#304352); */
+}
+
+#Name, #titleName{
+	font-family: 'Cabin', sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	letter-spacing: 3px;
+	position: relative;
+}
+#Name{
+	font-size: 8rem;
+	color: #ffffff;
+	margin-top: 10%;
+}
+
+#titleName{
+	margin-top: 1%;
+	color: #ffffff;
+}
+
+#titleName h1{
+	font-weight: 100;
+	font-size: 2rem !important;
+}
+
+
+#OneLine{
+	width: 65%;
+	margin:auto;
+	display: inline-flex;
+	margin-top: 1%;
+	z-index: 10;
+}
+
+
+#binaryNums{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+opacity: 0.75;
+}
+
+.fa{
+	color: red;
+}
+
+
+.Github, .Linkedin, .Mail, .Twitter{
+	margin: auto;
+	font-size: 5vw !important;
+	padding: 1px;
+	margin-right:auto;
+	margin-left: auto;
+	height: auto;
+	text-decoration: none;
+	position: static;
+}
+
+.contact{
+	background: -webkit-linear-gradient(#0099F7, #F11712);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	color: #ffffff;
+	font-size: 1.2vw;
+	margin: 0 auto;
+}
+
+
+
+
+i:hover{
+	color: #9195ff !important;
+}
+a:hover{
+	cursor:pointer;
+}
+
+.Heading{
+	margin-top: 0;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	color: white;
+}
+
+#Projects{
+	color: #ffffff;
+	font-size: 4rem;
+	font-weight: 100;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	z-index: 10;
+}
+
+.Line1, .Line2{
+	border:0.5px solid #a9c8f9;
+	margin: auto;
+	background: #a9c8f9;
+	width:38%;
+	height: 0.45%;
+	z-index: 1;
+}
+
+
+.Project{
+	width: 70%;
+	height: auto;
+	margin: auto;
+	border-radius: 10px;
+	position: relative;
+	margin-top: 10%;
+	background:#ffffff;
+	/*background-image: -webkit-linear-gradient(#00C9FF,#92FE9D);*/
+	background-image:  -webkit-linear-gradient(#414345,#232526);
+	}
+
+.Project *{
+	color: #ededed;
+}
+#Yummy{
+	margin-top: 7%;
+}
+#YummyIcon, #PokeitIcon,#remindVoiceIcon, #PpIcon{
+	margin-top: 1%;
+	margin-left: 1%;
+}
+
+
+
+.Project span{
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+	display: inline-flex;
+}
+
+.projectName{
+	font-size: 3rem;
+	margin: auto 0;
+	margin-top: 2%;
+}
+
+.round{
+	border-radius: 100%;
+	width: 15px;
+	height: 15px;
+	position: relative;
+	right: 5px;
+	display: flex;
+}
+.one{
+	position: relative;
+	margin: 0;
+	background: #ff5bb8;
+}
+
+.two{
+	position: relative;
+	margin: 0;
+	background: #5487f7;
+}
+
+.third{
+	margin: 0;
+	background: #009124;
+}
+
+.info{
+	display: block;
+	margin:0;
+	position: absolute;
+	top: 20%;
+	right: 0.5%;
+}
+.round, .tools h3{
+	margin: 0;
+	display: inline-flex;
+	margin-top: 15%;
+}
+
+.firstTool, .SecondTool, .ThirdTool, .projectUrl{
+	font-size: 1.25rem;
+}
+.tools{
+	margin: 0;
+	display: block;
+}
+
+.tools h3{
+	font-weight: 100 !important;
+}
+.SecondTool, .ThirdTool, .githubCode{
+	margin: 0;
+	padding: 0;
+}
+
+.githubCode{
+	display: block;
+	text-decoration: none;
+	width: auto;
+	margin-top: 15%;
+	border: 3px solid #ededed;
+	border-radius: 2px;
+
+}
+
+.projectUrl h3{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400 !important;
+	color: #ffffff;
+	padding: 0 0.5px;
+	font-size: 1.2rem;
+	margin: 0 auto;	
+}
+.projectUrl{
+	right: 2.2%;
+	padding: 5px;
+	background-image: -webkit-linear-gradient(#6441A5,#2a0845);
+	text-decoration: none !important;
+	border-radius: 2px;
+	display: table;
+	margin: 0 auto;
+	margin-top: 10%;
+}
+
+.githubCode h3{	
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	color: #ededed;
+	font-size: 1.2rem;
+	text-decoration:none !important;
+	display: table;
+	margin:0 auto;
+}
+
+.githubCode:hover{
+	background: #b2b2b2;
+}
+
+.projectUrl:hover{
+	background: #8e53fc;
+}
+#git1, #git2, #git3, #git4{
+	font-size: 2rem !important;
+	color: #ededed !important;
+	display: table;
+	margin:0 auto;
+}
+.description{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.75rem;
+	font-weight: 100 !important;
+	width: 40%;
+	margin: auto 2%;
+}
+.about{
+	padding-bottom: 30px;
+}
+.nexus{
+	position: relative;
+	border: 1.5px solid black;
+	width: 155px;
+	height: 300px;
+	background: white;
+	border-radius: 3px;
+	margin-left: 13%;
+}
+
+.nexusScreen{
+	height: 280px;
+	width: 150px;
+	margin-top: 12px;
+	margin-left: 2.5px;
+	border-radius: 2px;
+	background: #000000;
+}
+
+.nexusScreen h3{
+
+}
+.speaker{
+	position: absolute;
+	top: 4px;
+	left: 62.5px;
+	width: 30px;
+	height: 4px;
+	background: #000000;
+	border-width: 10px;
+	border-radius: 5px;
+}
+
+.nexusCamera{
+	position: absolute;
+	background: #000000;
+	top: 4px;
+	width: 5px;
+	height: 5px;
+	left: 40px;
+	border-radius: 100%;
+}
+
+#ppPict{
+	position: relative;
+	bottom: 5px;
+	width: 40%;
+	height: 350px;
+	border: 1px solid #000000;
+}
+
+.ipad{
+	border: 1.5px solid #000000;
+	background: #ffffff;
+	width: 450px;
+	height: 300px;
+	position: relative;
+	border-radius: 6px;
+	margin-left: 2%;
+}
+
+.ipadScreen{
+	width: 90%;
+	height: 288px;
+	margin-left: 4%;
+	background: #000000;
+	margin-top: 6px;
+	position: relative;
+}
+#patientsPalScreen{
+	position: absolute;
+	top: 35px;
+	width: 100%;
+	font-family: 'Just Another Hand', cursive;
+	letter-spacing: 4px;
+	text-align: center;
+	color: red;
+	font-weight: 100 !important;
+	font-size: 4rem !important;
+}
+
+.ipadCamera{
+	position: absolute;
+	left: 1%;
+	top: 50%;
+	border-radius: 100%;
+	width: 5px;
+	height: 5px;
+	background: #000000;
+}
+.nexus{
+	display: none;
+}
+.ipadbutton{
+	position: absolute;
+	right: 1%;
+	top:48%;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #000000;
+	border-radius: 100%;
+}
+
+@media (max-width: 1700px){
+	.ipad{
+		display: none;
+	}
+	#patientsPalScreen{
+		top: 80px;
+		font-size: 2rem !important;
+	}
+	.nexus{
+		display: initial;
+	}
+
+}
+
+@media(max-width: 1040px){
+	
+	#Projects{
+		font-size: 3.5rem;
+	}
+	.Line1, .Line2{
+		width: 34%;
+	}
+	.nexus{
+		margin-left: 5%;
+	}
+}
+
+@media (max-width: 880px){
+	#Header{
+		height: auto;
+	}
+	#Name{
+		margin-top: 5%;
+		font-size: 7rem;
+	}
+	#titleName h1{
+	font-size: 1.5rem !important;
+	}
+	#buttons{
+	right: 0;
+	bottom: 0;
+	}
+
+#up, #down{
+	width: 2rem;
+	height: 2rem;
+}
+	.Project{
+		width: 90%;
+	}
+	#Projects{
+		font-size: 3rem;
+	}
+	.Line1, .Line2{
+		width: 33%;
+	}
+
+
+}
+
+@media(max-width: 800px){
+	
+	.projectName{
+		font-size: 2.5rem;
+	}
+	.Project{
+		width: 90%;
+	}
+	#YummyIcon, #PokeitIcon{
+		width: 80px;
+		height: 80px;
+	}
+	
+	.nexus{
+		margin: 0;
+	}
+	.description{
+		width: 45%;
+		font-size: 1.5rem;
+	}
+
+	#ppPict{
+		display: none;
+	}
+}
+@media (max-width: 680px){
+
+	#buttons{
+		display: none;
+	}
+	.Github h4, .Linkedin h4, .Mail h4, .Twitter h4{
+		font-size: 2vw !important;
+	}
+	.nexus{
+		display: none;
+	}
+	#up, #down{
+	width: 1.5rem;
+	height: 1.5rem;
+	}
+	#OneLine{
+		width: 90%;
+	}
+	.contact{
+		font-size: 8vw !important;
+	}
+	.Project{
+		height: auto;
+	}
+	.description{
+		margin-top: 8%;
+		width: auto;
+	}
+	.info{
+		position: static;
+	}
+	.tools{
+		display: inline-block;
+		margin-top: 1%;
+		margin-left: 5%;
+	}
+
+	
+	.links{
+		position: static;
+		margin-top: 5%;
+		padding: 8%;
+	}
+	.round, .tools h3{
+		margin: 0;
+		display: inline-flex;
+	}
+
+
+
+	.githubCode, .projectUrl {
+		position: static;
+		display: inline-block;
+		margin: auto;
+	}
+
+	.githubCode{
+		position: absolute;
+		bottom: 1%;
+		left: 1%;
+	}
+	.projectUrl{
+		position: absolute;
+		right:1%;
+		bottom: 1%;
+	}
+
+	.githubCode:hover{
+		background: none !important;
+	}
+	.projectUrl:hover{
+		background-image: -webkit-linear-gradient(#6441A5,#2a0845);
+	}
+
+}
+@media (max-width: 580px){
+	#Name{
+		font-size: 5rem;
+	}
+	.Heading{
+		width: 100%;
+	}
+	#titleName h1{
+	font-size: 1rem !important;
+	}
+	
+	.Project{
+		width: 90%;
+	}
+	
+	.Line1, .Line2{
+		width: 28%;
+	}
+
+}
+
+@media (max-width: 480px){
+	
+	.Project{
+		width: 90%;
+	}
+	#up, #down{
+	width: 1.2rem;
+	height: 1.2rem;
+	}
+	.Line1, .Line2{
+		width: 25%;
+	}
+	
+}
+
+@media (max-width: 400px){
+	.links{
+		margin-top: 3%;
+		padding: 15%;
+	}
+
+	.Project{
+		width: auto;
+	}
+
+	.Line1, .Line2{
+		width: 20%;
+	}
+}
+
+@media(max-width: 270px){
+	.Project span{
+		display: block;
+	}
+	.links{
+		padding: 25%;
+	}
+	.githubCode, .projectUrl {
+		position: static;
+		display: block;
+		margin-top: 5%;
+		margin-left: 5%;
+		padding: 0;
+	}
+}
