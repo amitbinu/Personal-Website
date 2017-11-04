@@ -28,7 +28,7 @@ function Number() {
   this.z = random(width);
   this.number = getRandomIntInclusive(0,1) + "";
   this.update = function() {
-    this.z = this.z - 5;
+    this.z = this.z - 8;
     if (this.z < 1) {
       this.z = width;
       this.x = random(-width, width);
@@ -42,9 +42,10 @@ function Number() {
     var sx = map(this.x / this.z, 0, 1, 0, width);
     var sy = map(this.y / this.z, 0, 1, 0, height);
 
-    var r = map(this.z, 0, width, 16, 0);
-    textFont('Arial',20);
+    var r = map(this.z, 0, width, 40,5);
+    textFont('Arial',r);
     text(this.number,sx,sy);
+    stroke('#42f450');
   }
 }
 
