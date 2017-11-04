@@ -249,7 +249,7 @@ a:hover{
 .projectUrl h3{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400 !important;
-	color: #ffffff;
+	color: #000000;
 	padding: 0 0.5px;
 	font-size: 1.2rem;
 	margin: 0 auto;	
@@ -257,7 +257,7 @@ a:hover{
 .projectUrl{
 	right: 2.2%;
 	padding: 5px;
-	background-image: -webkit-linear-gradient(#6441A5,#2a0845);
+	background:#11aadd;
 	text-decoration: none !important;
 	border-radius: 2px;
 	display: table;
@@ -303,7 +303,7 @@ a:hover{
 	border: 1.5px solid black;
 	width: 155px;
 	height: 300px;
-	background: white;
+	background: #65737e;
 	border-radius: 3px;
 	margin-left: 13%;
 }
@@ -314,7 +314,7 @@ a:hover{
 	margin-top: 12px;
 	margin-left: 2.5px;
 	border-radius: 2px;
-	background: #000000;
+	background:	#000000;
 }
 
 .nexusScreen h3{
@@ -351,7 +351,7 @@ a:hover{
 
 .ipad{
 	border: 1.5px solid #000000;
-	background: #ffffff;
+	background: #65737e;
 	width: 450px;
 	height: 300px;
 	position: relative;
@@ -556,7 +556,7 @@ a:hover{
 		background: none !important;
 	}
 	.projectUrl:hover{
-		background-image: -webkit-linear-gradient(#6441A5,#2a0845);
+		background-image: -webkit-linear-gradient(#0099F7,#F11712);
 	}
 
 }
