@@ -1,14 +1,30 @@
+var size = 1;
 var numbers = [];
 var canvas;
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.parent('binaryNums');
-  for (var i = 0; i < 200; i++) {
-    numbers[i] = new Number();
-  }
+  sizer(windowWidth);
+  
 }
 
+function sizer(width){
+
+	  if (width > 800) {
+	  	size = 140;
+	  }
+	  else if (width > 400) {
+	  	size = 140;
+	  }
+	  else{
+	  	size = 110;
+	  }
+	  numbers = [];
+	  for (var i = 0; i < size; i++) {
+	    numbers[i] = new Number();
+	  }
+}
 function draw() {
   background(0);
   translate(width / 2, height / 2);
@@ -20,6 +36,7 @@ function draw() {
 
 function windowResized(){
  canvas.size(windowWidth,windowHeight);
+ sizer(windowWidth);
 }
 
 function Number() {

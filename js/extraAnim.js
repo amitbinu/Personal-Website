@@ -17,6 +17,13 @@ $(document).ready(function(){
 	};
 
 	$('.contactInfo').hover(hovered,notHovering);
+
+	$("#goDown").click(function(){
+		$('html, body').stop().animate({scrollTop: $('#Projects').offset().top+5},1000);
+	});
 	
+	$("#goUp").click(function(){
+		$('html, body').stop().animate({scrollTop: $('#Header').offset().top+5},1000);
+	});
 });
 
