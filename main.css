@@ -30,6 +30,30 @@ body{
    /* background-image: -webkit-linear-gradient(#d7d2cc,#304352); */
 }
 
+#menubar{
+	background: #212121;
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	display: inline-flex;
+	z-index: 400;
+	position: fixed;
+}
+
+.menu{
+	padding: 6px;
+	color: white;
+	border: 0.5px solid #ffffff;
+	//background: #707070;
+	margin: auto;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.menu:hover{
+	background: #707070;
+}
+
 #center{
 	margin: auto;
 	width: 100%;
@@ -143,7 +167,7 @@ a:hover{
 	color: white;
 }
 
-#Projects{
+#Projects, #aboutMe{
 	color: #ffffff;
 	font-size: 4rem;
 	font-weight: 100;
@@ -177,15 +201,19 @@ a:hover{
 .Project *{
 	color: #ededed;
 }
-#TimeTable-Generator{
-	margin-top: 5%;
+
+#TimeTable-Generator, #AmitBinu{
+	margin-top: 2.5%;
 }
-#YummyIcon, #PokeitIcon,#remindVoiceIcon, #PpIcon{
+
+#YummyIcon, #PokeitIcon,#remindVoiceIcon, #PpIcon, #myPict{
 	margin-top: 1%;
 	margin-left: 1%;
 }
 
-
+#myPict{
+	border-radius: 100%;
+}
 
 .Project span{
 	font-family: 'Open Sans', sans-serif;
@@ -197,6 +225,7 @@ a:hover{
 	font-size: 3rem;
 	margin: auto 0;
 	margin-top: 2%;
+	margin-left: 10px;
 }
 
 .round{
@@ -312,6 +341,15 @@ a:hover{
 	width: 40%;
 	margin: auto 2%;
 }
+
+.aboutDescr{
+	width: 100%;
+}
+
+.details{
+	font-size: 1.47rem;
+}
+
 .about{
 	padding-bottom: 30px;
 }
@@ -418,6 +456,7 @@ a:hover{
 	border-radius: 100%;
 }
 
+
 @media (max-width: 1700px){
 	.ipad{
 		display: none;
@@ -434,7 +473,7 @@ a:hover{
 
 @media(max-width: 1040px){
 	
-	#Projects{
+	#Projects, #aboutMe{
 		font-size: 3.5rem;
 	}
 	.Line1, .Line2{
@@ -446,7 +485,7 @@ a:hover{
 }
 
 @media (max-width: 880px){
-	#goDown, #goUp{
+	#goDown, #goUp, #menubar{
 		display: none;
 	}
 	#Header{
@@ -467,7 +506,7 @@ a:hover{
 	.Project{
 		width: 90%;
 	}
-	#Projects{
+	#Projects, #aboutMe{
 		font-size: 3rem;
 	}
 	.Line1, .Line2{
@@ -479,6 +518,10 @@ a:hover{
 
 @media(max-width: 800px){
 	
+	#Projects, #aboutMe{
+		font-size: 2.6rem;
+	}
+
 	.projectName{
 		font-size: 2.5rem;
 	}
@@ -573,7 +616,15 @@ a:hover{
 	}
 
 }
-@media (max-width: 580px){
+
+@media (max-width: 646px){
+
+	#Projects, #aboutMe{
+		font-size: 2.4rem;
+	}
+}
+
+@media (max-width: 600px){
 	#Name{
 		font-size: 5rem;
 	}
